@@ -1,6 +1,6 @@
-import React from "react";
-import NextLink from "next/link";
-import PropTypes from "prop-types";
+import React from 'react';
+import NextLink from 'next/link';
+import PropTypes from 'prop-types';
 import {
   Box,
   Drawer,
@@ -13,14 +13,14 @@ import {
   Collapse,
   ListItemIcon,
   ListItemText,
-} from "@mui/material";
-import FeatherIcon from "feather-icons-react";
-import LogoIcon from "../logo/LogoIcon";
-import Menuitems from "./MenuItems";
+} from '@mui/material';
+import FeatherIcon from 'feather-icons-react';
+import LogoIcon from '../logo/LogoIcon';
+import Menuitems from './MenuItems';
 // import Buynow from "./Buynow";
-import SimpleBar from "simplebar-react";
+import SimpleBar from 'simplebar-react';
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 const Sidebar = ({
   isMobileSidebarOpen,
@@ -35,10 +35,10 @@ const Sidebar = ({
   const location = router.pathname;
   const pathWithoutLastPart = router.pathname.slice(
     0,
-    router.pathname.lastIndexOf("/")
+    router.pathname.lastIndexOf('/')
   );
 
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const handleClick = (index) => {
     if (open === index) {
@@ -50,8 +50,8 @@ const Sidebar = ({
   };
 
   const SidebarContent = (
-    <SimpleBar style={{ height: "100%" }}>
-      <Box p={2} height="100%">
+    <SimpleBar style={{ height: '100%' }}>
+      <Box p={2} height="100%" maxWidth="200px">
         <LogoIcon />
         <Box mt={2}>
           <List>
@@ -63,7 +63,7 @@ const Sidebar = ({
                     <Typography
                       variant="subtitle2"
                       fontWeight="500"
-                      sx={{ my: 2, mt: 4, opacity: "0.4" }}
+                      sx={{ my: 2, mt: 4, opacity: '0.4' }}
                     >
                       {item.subheader}
                     </Typography>
@@ -82,7 +82,7 @@ const Sidebar = ({
                       sx={{
                         mb: 1,
                         ...(pathWithoutLastPart === item.href && {
-                          color: "white",
+                          color: 'white',
                           backgroundColor: (theme) =>
                             `${theme.palette.primary.main}!important`,
                         }),
@@ -91,7 +91,7 @@ const Sidebar = ({
                       <ListItemIcon
                         sx={{
                           ...(pathWithoutLastPart === item.href && {
-                            color: "white",
+                            color: 'white',
                           }),
                         }}
                       >
@@ -123,16 +123,16 @@ const Sidebar = ({
                                 sx={{
                                   mb: 1,
                                   ...(pathDirect === child.href && {
-                                    color: "primary.main",
-                                    backgroundColor: "transparent!important",
+                                    color: 'primary.main',
+                                    backgroundColor: 'transparent!important',
                                   }),
                                 }}
                               >
                                 <ListItemIcon
                                   sx={{
-                                    svg: { width: "14px", marginLeft: "3px" },
+                                    svg: { width: '14px', marginLeft: '3px' },
                                     ...(pathDirect === child.href && {
-                                      color: "primary.main",
+                                      color: 'primary.main',
                                     }),
                                   }}
                                 >
@@ -163,7 +163,7 @@ const Sidebar = ({
                         sx={{
                           mb: 1,
                           ...(pathDirect === item.href && {
-                            color: "white",
+                            color: 'white',
                             backgroundColor: (theme) =>
                               `${theme.palette.primary.main}!important`,
                           }),
@@ -171,7 +171,7 @@ const Sidebar = ({
                       >
                         <ListItemIcon
                           sx={{
-                            ...(pathDirect === item.href && { color: "white" }),
+                            ...(pathDirect === item.href && { color: 'white' }),
                           }}
                         >
                           <FeatherIcon
@@ -204,9 +204,9 @@ const Sidebar = ({
         variant="persistent"
         PaperProps={{
           sx: {
-            width: "265px",
-            border: "0 !important",
-            boxShadow: "0px 7px 30px 0px rgb(113 122 131 / 11%)",
+            width: '265px',
+            border: '0 !important',
+            boxShadow: '0px 7px 30px 0px rgb(113 122 131 / 11%)',
           },
         }}
       >
@@ -221,8 +221,8 @@ const Sidebar = ({
       onClose={onSidebarClose}
       PaperProps={{
         sx: {
-          width: "265px",
-          border: "0 !important",
+          width: '265px',
+          border: '0 !important',
         },
       }}
       variant="temporary"

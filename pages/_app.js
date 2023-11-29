@@ -1,18 +1,18 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Head from "next/head";
-import { useSelector } from "react-redux";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider } from "@emotion/react";
-import RTL from "../src/theme/RTL";
-import ThemeSettings from "../src/theme/ThemeSettings";
-import createEmotionCache from "../src/createEmotionCache";
-import FullLayout from "../src/layouts/FullLayout";
-import BlankLayout from "../src/layouts/BlankLayout";
-import "../styles/style.scss";
-import "../data";
-import wrapper from "../src/store/Store";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
+import { useSelector } from 'react-redux';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { CacheProvider } from '@emotion/react';
+import RTL from '../src/theme/RTL';
+import ThemeSettings from '../src/theme/ThemeSettings';
+import createEmotionCache from '../src/createEmotionCache';
+import FullLayout from '../src/layouts/FullLayout';
+import BlankLayout from '../src/layouts/BlankLayout';
+import '../styles/style.scss';
+import '../data';
+import wrapper from '../src/store/Store';
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -28,7 +28,7 @@ function MyApp(props) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>Flexy NextJs Starter kit page</title>
+        <title>Evvent Dashboard example</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={Gettheme}>

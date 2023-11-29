@@ -1,9 +1,9 @@
-import { createTheme } from "@mui/material/styles";
-import components from "./ComponentOverRide";
-import _ from "lodash";
-import shadows from "./Shadows";
-import { useSelector } from "react-redux";
-import typography from "./Typoraphy";
+import { createTheme } from '@mui/material/styles';
+import components from './ComponentOverRide';
+import _ from 'lodash';
+import shadows from './Shadows';
+import { useSelector } from 'react-redux';
+import typography from './Typoraphy';
 import {
   BLUE_THEME,
   GREEN_THEME,
@@ -12,76 +12,76 @@ import {
   PURPLE_THEME,
   INDIGO_THEME,
   ORANGE_THEME,
-} from "../store/constants";
+} from '../store/constants';
 
 // Create a theme instance.
 const baseTheme = {
   palette: {
     primary: {
-      main: "#03c9d7",
-      light: "#e5fafb",
-      dark: "#05b2bd",
-      contrastText: "#ffffff",
+      main: '#03c9d7',
+      light: '#e5fafb',
+      dark: '#05b2bd',
+      contrastText: '#ffffff',
     },
     secondary: {
-      main: "#fb9678",
-      light: "#fcf1ed",
-      dark: "#e67e5f",
-      contrastText: "#ffffff",
+      main: '#fb9678',
+      light: '#fcf1ed',
+      dark: '#e67e5f',
+      contrastText: '#ffffff',
     },
     success: {
-      main: "#00c292",
-      light: "#ebfaf2",
-      dark: "#00964b",
-      contrastText: "#ffffff",
+      main: '#00c292',
+      light: '#ebfaf2',
+      dark: '#00964b',
+      contrastText: '#ffffff',
     },
     danger: {
-      main: "#e46a76",
-      light: "#fdf3f5",
+      main: '#e46a76',
+      light: '#fdf3f5',
     },
     info: {
-      main: "#0bb2fb",
-      light: "#a7e3f4",
+      main: '#0bb2fb',
+      light: '#a7e3f4',
     },
     error: {
-      main: "#e46a76",
+      main: '#e46a76',
       light: '#fdf3f5',
-      dark: "#e45a68",
+      dark: '#e45a68',
     },
     warning: {
-      main: "#fec90f",
+      main: '#fec90f',
       light: '#fff4e5',
-      dark: "#dcb014",
-      contrastText: "#ffffff",
+      dark: '#dcb014',
+      contrastText: '#ffffff',
     },
     text: {
-      secondary: "#777e89",
-      danger: "#fc4b6c",
+      secondary: '#777e89',
+      danger: '#fc4b6c',
     },
     grey: {
-      A100: "#ecf0f2",
-      A200: "#99abb4",
-      A400: "#767e89",
-      A700: "#e6f4ff",
+      A100: '#ecf0f2',
+      A200: '#99abb4',
+      A400: '#767e89',
+      A700: '#e6f4ff',
     },
     action: {
-      disabledBackground: "rgba(73,82,88,0.12)",
+      disabledBackground: 'rgba(73,82,88,0.12)',
       hoverOpacity: 0.02,
-      hover: "rgba(0, 0, 0, 0.03)",
+      hover: 'rgba(0, 0, 0, 0.03)',
     },
     background: {
-      default: "#fafbfb",
+      default: '#fafbfb',
     },
   },
   mixins: {
     toolbar: {
-      color: "#949db2",
-      "@media(min-width:1280px)": {
-        minHeight: "64px",
-        padding: "0 30px",
+      color: '#949db2',
+      '@media(min-width:1280px)': {
+        minHeight: '64px',
+        padding: '0 30px',
       },
-      "@media(max-width:1280px)": {
-        minHeight: "64px",
+      '@media(max-width:1280px)': {
+        minHeight: '64px',
       },
     },
   },
@@ -95,14 +95,14 @@ const themesOptions = [
     name: BLUE_THEME,
     palette: {
       primary: {
-        main: "#1a97f5",
-        light: "#e6f4ff",
-        dark: "#1682d4",
+        main: '#1a97f5',
+        light: '#e6f4ff',
+        dark: '#1682d4',
       },
       secondary: {
-        main: "#1e4db7",
-        light: "#ddebff",
-        dark: "#173f98",
+        main: '#1e4db7',
+        light: '#ddebff',
+        dark: '#173f98',
       },
     },
   },
@@ -110,13 +110,13 @@ const themesOptions = [
     name: GREEN_THEME,
     palette: {
       primary: {
-        main: "#00cec3",
-        light: "#d7f8f6",
-        dark: "#02b3a9",
-        contrastText: "#ffffff",
+        main: '#00cec3',
+        light: '#d7f8f6',
+        dark: '#02b3a9',
+        contrastText: '#ffffff',
       },
       secondary: {
-        main: "#066a73",
+        main: '#066a73',
       },
     },
   },
@@ -124,12 +124,12 @@ const themesOptions = [
     name: PURPLE_THEME,
     palette: {
       primary: {
-        main: "#7352ff",
-        light: "#e5e0fa",
-        dark: "#5739d6",
+        main: '#7352ff',
+        light: '#e5e0fa',
+        dark: '#5739d6',
       },
       secondary: {
-        main: "#402e8d",
+        main: '#402e8d',
       },
     },
   },
@@ -137,12 +137,12 @@ const themesOptions = [
     name: INDIGO_THEME,
     palette: {
       primary: {
-        main: "#1e4db7",
-        light: "#e6f4ff",
-        dark: "#0c399e",
+        main: '#1e4db7',
+        light: '#e6f4ff',
+        dark: '#0c399e',
       },
       secondary: {
-        main: "#11397b",
+        main: '#11397b',
       },
     },
   },
@@ -150,16 +150,16 @@ const themesOptions = [
     name: ORANGE_THEME,
     palette: {
       primary: {
-        main: "#03c9d7",
-        light: "#e5fafb",
-        dark: "#05b2bd",
-        contrastText: "#ffffff",
+        main: '#03c9d7',
+        light: '#e5fafb',
+        dark: '#05b2bd',
+        contrastText: '#ffffff',
       },
       secondary: {
-        main: "#fb9678",
-        light: "#fcf1ed",
-        dark: "#e67e5f",
-        contrastText: "#ffffff",
+        main: '#fb9678',
+        light: '#fcf1ed',
+        dark: '#e67e5f',
+        contrastText: '#ffffff',
       },
     },
   },
@@ -167,13 +167,13 @@ const themesOptions = [
     name: RED_THEME,
     palette: {
       primary: {
-        main: "#ff5c8e",
-        light: "#fce6ed",
-        dark: "#d43653",
-        contrastText: "#ffffff",
+        main: '#ff5c8e',
+        light: '#fce6ed',
+        dark: '#d43653',
+        contrastText: '#ffffff',
       },
       secondary: {
-        main: "#5e244d",
+        main: '#5e244d',
       },
     },
   },
@@ -181,7 +181,7 @@ const themesOptions = [
     name: BLACK_THEME,
     palette: {
       primary: {
-        main: "#1c2025",
+        main: '#1c2025',
       },
     },
   },
@@ -195,14 +195,14 @@ export const BuildTheme = (config = {}) => {
     palette: {
       mode: customizer.activeMode,
       background: {
-        default: customizer.activeMode === "dark" ? "#20232a" : "#fafbfb",
-        dark: customizer.activeMode === "dark" ? "#1c2025" : "#ffffff",
-        paper: customizer.activeMode === "dark" ? "#282C34" : "#ffffff",
+        default: customizer.activeMode === 'dark' ? '#20232a' : '#fafbfb',
+        dark: customizer.activeMode === 'dark' ? '#1c2025' : '#ffffff',
+        paper: customizer.activeMode === 'dark' ? '#282C34' : '#ffffff',
       },
       text: {
         primary:
-          customizer.activeMode === "dark" ? "#e6e5e8" : "rgba(0, 0, 0, 0.87)",
-        secondary: customizer.activeMode === "dark" ? "#adb0bb" : "#777e89",
+          customizer.activeMode === 'dark' ? '#e6e5e8' : 'rgba(0, 0, 0, 0.87)',
+        secondary: customizer.activeMode === 'dark' ? '#adb0bb' : '#777e89',
       },
     },
   };
